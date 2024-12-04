@@ -7,6 +7,20 @@ namespace StandardCalc.Standard
     internal class Methods
     {
 
+        internal static Method<float> Decimal()
+        {
+            return SimpleBase;
+
+            [CalcType(CalcType.None)]
+            [LevelType(LevelType.None)]
+            [ArgsType(ArgsType.None)]
+            float SimpleBase(float[] f)
+            {
+                Values.Instance.Decimal = true;
+                return -1;
+            }
+        }
+
         internal static Method<float> Clear()
         {
             return SimpleBase;

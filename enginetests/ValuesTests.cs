@@ -96,5 +96,26 @@ namespace StandardCalc.EngineTests
 
             Assert.IsNotNull(actual);
         }
+
+        [TestMethod]
+        public void GetItemInstance_ConcatChars()
+        {
+            var  decimal1 = (ItemMethod)Item.CreateItem(",", Methods.Decimal());
+
+            var value5 = Item.CreateItem("5", 5);
+            var value1 = Item.CreateItem("1", 1);
+
+            Values.Clear();
+            Values.Add(value5);
+            Values.Add(decimal1); 
+            Values.Add(value1);
+            
+
+            var actual = Values.Process();
+            Assert.IsNotNull(actual == 5.1);
+            
+            Assert.IsNotNull(actual);
+        }
+
     }
 }

@@ -26,7 +26,7 @@ namespace StandardCalc.Standard
             Item Sqrt = Item.CreateItem(((char)8730).ToString(), Methods.Sqrt());
             Item Square = Item.CreateItem("x²", Methods.Square());
 
-            Item Comma = Item.CreateItem(",");
+            Item Comma = Item.CreateItem(".",Methods.Decimal());
 
             Item Num0 = Item.CreateItem("0", 0);
             Item Num1 = Item.CreateItem("1", 1);

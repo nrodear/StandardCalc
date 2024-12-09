@@ -2,11 +2,10 @@
 using CalcLib.Engine;
 using CalcLib.Types;
 
-namespace StandardCalc.Standard
+namespace StandardCalc.standard
 {
     internal class Methods
     {
-
         internal static Method<float> Decimal()
         {
             return SimpleBase;
@@ -14,7 +13,7 @@ namespace StandardCalc.Standard
             [CalcType(CalcType.None)]
             [LevelType(LevelType.None)]
             [ArgsType(ArgsType.None)]
-            float SimpleBase(float[] f)
+            static float SimpleBase(float[] f)
             {
                 Values.Instance.Decimal = true;
                 return -1;
@@ -28,7 +27,7 @@ namespace StandardCalc.Standard
             [CalcType(CalcType.None)]
             [LevelType(LevelType.None)]
             [ArgsType(ArgsType.None)]
-            float SimpleBase(float[] f)
+            static float SimpleBase(float[] f)
             {
                 Values.Clear();
                 Elements.Clear();
@@ -43,7 +42,7 @@ namespace StandardCalc.Standard
             [CalcType(CalcType.None)]
             [LevelType(LevelType.None)]
             [ArgsType(ArgsType.None)]
-            float SimpleBase(float[] f)
+            static float SimpleBase(float[] f)
             {
                 Values.Process();
                 Values.Clear();
@@ -51,14 +50,14 @@ namespace StandardCalc.Standard
             }
         }
 
-        internal static Method<float> Add()
+        internal static Method<float> AddFunction()
         {
             return SimpleBase;
 
             [CalcType(CalcType.Func)]
             [LevelType(LevelType.Two)]
             [ArgsType(ArgsType.Two)]
-            float SimpleBase(float[] f)
+            static float SimpleBase(float[] f)
             {
                 ValidateArgs(f, ArgsType.Two);
                 return f[0] + f[1];
@@ -72,7 +71,7 @@ namespace StandardCalc.Standard
             [CalcType(CalcType.Func)]
             [LevelType(LevelType.Two)]
             [ArgsType(ArgsType.Two)]
-            float SimpleBase(float[] f)
+            static float SimpleBase(float[] f)
             {
                 ValidateArgs(f, ArgsType.Two);
                 return f[0] - f[1];
@@ -86,7 +85,7 @@ namespace StandardCalc.Standard
             [CalcType(CalcType.Func)]
             [LevelType(LevelType.Two)]
             [ArgsType(ArgsType.Two)]
-            float SimpleBase(float[] f)
+            static float SimpleBase(float[] f)
             {
                 ValidateArgs(f, ArgsType.Two);
                 return f[0] * f[1];
@@ -100,7 +99,7 @@ namespace StandardCalc.Standard
             [CalcType(CalcType.Func)]
             [LevelType(LevelType.Two)]
             [ArgsType(ArgsType.Two)]
-            float SimpleBase(float[] f)
+            static float SimpleBase(float[] f)
             {
                 ValidateArgs(f, ArgsType.Two);
                 return f[0] / f[1];
@@ -114,7 +113,7 @@ namespace StandardCalc.Standard
             [CalcType(CalcType.Func)]
             [LevelType(LevelType.One)]
             [ArgsType(ArgsType.Two)]
-            float SimpleBase(float[] f )
+            static float SimpleBase(float[] f)
             {
                 ValidateArgs(f, ArgsType.Two);
                 return (f[0] / 100) * f[1];
@@ -128,13 +127,13 @@ namespace StandardCalc.Standard
             [CalcType(CalcType.Func)]
             [LevelType(LevelType.Instant)]
             [ArgsType(ArgsType.One)]
-            float SimpleBase(float[] f)
+            static float SimpleBase(float[] f)
             {
                 ValidateArgs(f, ArgsType.One);
                 return (float)Math.Pow(f[0], 2);
             }
         }
-        
+
         internal static Method<float> Sqrt()
         {
             return SimpleBase;
@@ -142,7 +141,7 @@ namespace StandardCalc.Standard
             [CalcType(CalcType.Func)]
             [LevelType(LevelType.Instant)]
             [ArgsType(ArgsType.One)]
-            float SimpleBase(float[] f)
+            static float SimpleBase(float[] f)
             {
                 ValidateArgs(f, ArgsType.One);
                 return (float)Math.Sqrt(f[0]);
@@ -156,14 +155,14 @@ namespace StandardCalc.Standard
             [CalcType(CalcType.Func)]
             [LevelType(LevelType.Instant)]
             [ArgsType(ArgsType.One)]
-            float SimpleBase(float[] f)
+            static float SimpleBase(float[] f)
             {
                 ValidateArgs(f, ArgsType.One);
                 return (-1) * f[0];
             }
         }
 
-        private static void ValidateArgs(float[] f, ArgsType  argType)
+        private static void ValidateArgs(float[] f, ArgsType argType)
         {
             if (f != null && f.Length != (int)argType)
             {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StandardCalc.Standard;
+using StandardCalc.standard;
 
-namespace CalcLib.EngineTests
+namespace StandardCalc.enginetests
 {
     [TestClass]
 
@@ -10,7 +10,7 @@ namespace CalcLib.EngineTests
         [TestMethod]
         public void Methods_allTest()
         {
-            Methods.Add().Invoke(new float[] {1,1 });
+            Methods.AddFunction().Invoke(new float[] {1,1 });
             Methods.Division().Invoke(new float[] { 1, 1 });
             Methods.Invert().Invoke(new float[] { 1});
             Methods.Minus().Invoke(new float[] { 1, 1 });

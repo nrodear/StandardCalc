@@ -1,8 +1,8 @@
 ﻿using CalcLib.Engine;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StandardCalc.Standard;
+using StandardCalc.standard;
 
-namespace StandardCalc.EngineTests
+namespace StandardCalc.enginetests
 {
     [TestClass]
     public class ValuesTests
@@ -28,7 +28,7 @@ namespace StandardCalc.EngineTests
         public void GetValueUsingDelegates_ArgTypTwo()
         {
             var value = Item.CreateItem("5", 5);
-            var methodAdd = Item.CreateItem("+", Methods.Add());
+            var methodAdd = Item.CreateItem("+", Methods.AddFunction());
 
             Values.Clear();
             Values.Add(value);
@@ -46,7 +46,7 @@ namespace StandardCalc.EngineTests
         public void GetValueUsingDelegates_ArgTypTwoTwice()
         {
             var value = Item.CreateItem("5", 5);
-            var methodAdd = Item.CreateItem("+", Methods.Add());
+            var methodAdd = Item.CreateItem("+", Methods.AddFunction());
 
             Values.Clear();
             Values.Add(value);
@@ -67,7 +67,7 @@ namespace StandardCalc.EngineTests
         {
             var value100 = Item.CreateItem("1", 100);
             var value10 = Item.CreateItem("1", 10);
-            var methodPlus = Item.CreateItem("+", Methods.Add());
+            var methodPlus = Item.CreateItem("+", Methods.AddFunction());
             var methodPercent = Item.CreateItem("%", Methods.Percent());
 
             Values.Clear();

@@ -1,7 +1,7 @@
 ﻿using CalcLib.Engine;
 using CalcLib.Types;
 
-namespace StandardCalc.Standard
+namespace StandardCalc.standard
 {
     public class ButtonValues : IButtonValues
     {
@@ -9,45 +9,43 @@ namespace StandardCalc.Standard
 
         public ButtonValues()
         {
-            Item _nnnn = NoneItem.CreateItem();
+            var none = NoneItem.CreateItem();
 
-            Item Clear = Item.CreateItem("C", Methods.Clear());
+            var clear = Item.CreateItem("C", Methods.Clear());
+            var calc = Item.CreateItem("=", Methods.Result());
+            var percent = Item.CreateItem("%", Methods.Percent());
+            var inv = Item.CreateItem(((char)177).ToString(), Methods.Invert());
 
-            Item Calc = Item.CreateItem("=", Methods.Result());
+            var add = Item.CreateItem("+", Methods.AddFunction());
+            var div = Item.CreateItem("/", Methods.Division());
+            var minus = Item.CreateItem("-", Methods.Minus());
+            var multi = Item.CreateItem("*", Methods.Multiply());
 
-            Item perc = Item.CreateItem("%", Methods.Percent());
-            Item Inv = Item.CreateItem(((char)177).ToString(), Methods.Invert());
+            var sqrt = Item.CreateItem(((char)8730).ToString(), Methods.Sqrt());
+            var square = Item.CreateItem("x²", Methods.Square());
 
-            Item Add = Item.CreateItem("+", Methods.Add());
-            Item Div = Item.CreateItem("/", Methods.Division());
-            Item Minus = Item.CreateItem("-", Methods.Minus());
-            Item Multi = Item.CreateItem("*", Methods.Multiply());
+            var comma = Item.CreateItem(".", Methods.Decimal());
 
-            Item Sqrt = Item.CreateItem(((char)8730).ToString(), Methods.Sqrt());
-            Item Square = Item.CreateItem("x²", Methods.Square());
-
-            Item Comma = Item.CreateItem(".",Methods.Decimal());
-
-            Item Num0 = Item.CreateItem("0", 0);
-            Item Num1 = Item.CreateItem("1", 1);
-            Item Num2 = Item.CreateItem("2", 2);
-            Item Num3 = Item.CreateItem("3", 3);
-            Item Num4 = Item.CreateItem("4", 4);
-            Item Num5 = Item.CreateItem("5", 5);
-            Item Num6 = Item.CreateItem("6", 6);
-            Item Num7 = Item.CreateItem("7", 7);
-            Item Num8 = Item.CreateItem("8", 8);
-            Item Num9 = Item.CreateItem("9", 9);
+            var num0 = Item.CreateItem("0", 0);
+            var num1 = Item.CreateItem("1", 1);
+            var num2 = Item.CreateItem("2", 2);
+            var num3 = Item.CreateItem("3", 3);
+            var num4 = Item.CreateItem("4", 4);
+            var num5 = Item.CreateItem("5", 5);
+            var num6 = Item.CreateItem("6", 6);
+            var num7 = Item.CreateItem("7", 7);
+            var num8 = Item.CreateItem("8", 8);
+            var num9 = Item.CreateItem("9", 9);
 
 
             _buttonItems = new Item[,]
             {
-                { perc, _nnnn, Clear, _nnnn },
-                { _nnnn, Square, Sqrt, Div },
-                { Num7, Num8, Num9, Multi },
-                { Num4, Num5, Num6, Minus },
-                { Num1, Num2, Num3, Add },
-                { Inv, Num0, Comma, Calc },
+                { percent, none, clear, none },
+                { none, square, sqrt, div },
+                { num7, num8, num9, multi },
+                { num4, num5, num6, minus },
+                { num1, num2, num3, add },
+                { inv, num0, comma, calc },
             };
 
             GetLengthY = _buttonItems.GetUpperBound(0);

@@ -6,7 +6,7 @@ C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\Microsoft.TestPlatform.Ada
 C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\StandardCalc.dll.config
 C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\StandardCalc.dll
 C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\StandardCalc.pdb
-C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\ClassLibrary1.dll
+C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\CalcLib.dll
 C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\Microsoft.ApplicationInsights.dll
 C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\Microsoft.Testing.Extensions.Telemetry.dll
 C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\Microsoft.Testing.Extensions.TrxReport.Abstractions.dll
@@ -26,8 +26,8 @@ C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\System.Numerics.Vectors.dl
 C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\System.Reflection.Metadata.dll
 C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\Microsoft.Win32.Registry.dll
-C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\ClassLibrary1.pdb
-C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\ClassLibrary1.dll.config
+C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\CalcLib.pdb
+C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\CalcLib.dll.config
 C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\Microsoft.ApplicationInsights.pdb
 C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\Microsoft.ApplicationInsights.xml
 C:\Users\ngerlach\source\repos\StandardCalc\bin\Debug\Microsoft.Testing.Extensions.Telemetry.xml

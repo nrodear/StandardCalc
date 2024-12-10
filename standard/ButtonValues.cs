@@ -1,5 +1,5 @@
-﻿using CalcLib.Engine;
-using CalcLib.Types;
+﻿using LibCalc.Engine;
+using LibCalc.Types;
 
 namespace StandardCalc.standard
 {
